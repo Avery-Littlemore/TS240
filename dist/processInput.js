@@ -1,0 +1,15 @@
+"use strict";
+function processInput(input) {
+    if (typeof input === "string") {
+        console.log(input.toUpperCase());
+    }
+    else if (typeof input === "number") {
+        console.log(input.toFixed(2));
+    }
+    else if ("length" in input) {
+        console.log(input.length);
+    }
+}
+processInput("hello"); // Outputs: HELLO
+processInput(42); // Outputs: 42.00
+processInput([1, 2, 3]); // Outputs: 3
