@@ -1,0 +1,35 @@
+// Create two variables, computer and smartphone, using a type alias Device that requires manufacturer (string), model (string), 
+// and year (number). Demonstrate TypeScript's structural compatibility by creating a variable with a shape that has compatible 
+// properties with Device.
+
+// Expected outcome:
+
+// Demonstration of how TypeScript's structural typing system handles object shapes with compatible properties.
+
+type Device = {
+  manufacturer: string,
+  model: string,
+  year: number,
+}
+
+let computer: Device = {
+  manufacturer: 'Apple',
+  model: 'Macbook Air',
+  year: 2020
+}
+
+// let smartphone: Device & { warranty: boolean } = {
+//   manufacturer: 'Apple',
+//   model: 'iPhone 14',
+//   year: 2022,
+//   warranty: false,  
+// }
+
+let smartphone = {
+  manufacturer: 'Apple',
+  model: 'iPhone 14',
+  year: 2022,
+  warranty: false,
+}
+
+let anotherSmartphone: Device = smartphone;
